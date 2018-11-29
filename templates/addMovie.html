@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>ADD NEW MOVIE</h1>
+        <form action="/addMovie" method="post">
+        <table>
+            <tr>
+                <td><label for=movies_title>Title of the movie:</label></td>
+                <td>
+                    <input id="movies_title" type="text" name="movies_title" value="{{movies_title}}"> 
+                </td>    
+            </tr>
+            <tr>
+                <td><label for="movies_releaseYear">Year released:</label></td>
+                <td>
+                    <input id="movies_releaseYear" name="movies_releaseYear" type="text" value="{{movies_releaseYear}}"> 
+                </td>
+            </tr>
+            <tr>
+                <td><label for="movies_genre">Genre:</label></td>
+                <td>
+                    <input id="movies_genre" name="movies_genre" type="text" value="{{movies_genre}}">  
+                </td>
+            </tr>
+            <tr>
+                <td><label for="movies_orgin">Where did this movie originate?:</label></td>
+                <td>
+                    <input id="movies_orgin" name="movies_orgin" type="text" value="{{movies_orgin}}">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="movies_director">Director of the movie:</label></td>
+                <td>
+                    <input id="movies_director" name="movies_director" type="text" value="{{movies_director}}">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="movies_wikiPage">Wikipedia page:</label></td>
+                <td>
+                    <input id="movies_wikiPage" name="movies_wikiPage" type="text" value="{{movies_wikiPage}}">  
+                </td>
+            </tr>
+            <tr>
+                <td><label for="movies_plot">Plot of the movie:</label></td>
+                <td>
+                    <input id="movies_plot" name="movies_plot" type="text" value="{{movies_plot}}">
+                </td>
+            </tr>
+        </table>    
+        <input type="submit" value="ADD MOVIE">
+    </form>
+
+{% endblock %}
